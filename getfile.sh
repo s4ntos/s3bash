@@ -31,9 +31,7 @@ usage="Usage: $0 bucket:dir/file (e.g $0 bucket:destination/folder/file.txt)"
 Key=${1:?"Error: ${usage}"}
 
 s3Bucket=$(echo ${Key} | cut -d: -f 1)
-#s3Bucket="iotbigdatarawfilesid-lit"
 object=$(echo ${Key} | cut -d: -f 2)
-#destinationKey="outputfiles/MZ/file"
 fileName=$(basename ${object})
 
 # s3 account info
