@@ -17,9 +17,7 @@ fileName=${1:?"Error: ${usage}"}
 destination=${2:?"Error: ${usage}"}
 
 s3Bucket=$(echo $destination | cut -d: -f 1)
-#s3Bucket="iotbigdatarawfilesid-lit"
 destinatonKey=$(echo $destination | cut -d: -f 2)
-#detinationKey="outputfiles/MZ/"
 
 yyyymmdd=$(date +%Y%m%d)
 region="eu-central-1"
